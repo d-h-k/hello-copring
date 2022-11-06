@@ -4,6 +4,7 @@ import io.hello.web.account.AccountDomain
 import lombok.AccessLevel
 import lombok.Getter
 import lombok.NoArgsConstructor
+import lombok.Setter
 import javax.persistence.*
 
 @Entity
@@ -16,7 +17,7 @@ class UserInformation {
     @GeneratedValue
     var id: Long? = null
 
-    var email: String? = null
+    var accoutId: String? = null
     var password: String? = null
 
     //@Column(name = "dg")
@@ -24,4 +25,8 @@ class UserInformation {
     var account: AccountDomain? = null;
 
 
+    constructor(accoutId: String?, password: String?) {
+        this.accoutId = accoutId
+        this.password = password
+    }
 }
