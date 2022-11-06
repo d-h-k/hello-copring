@@ -17,4 +17,10 @@ class WebController {
     fun sign(model: Model) : String {
         return "sign"
     }
+
+    @GetMapping("/login")
+    fun login(model: Model) : String {
+        model.addAttribute("title", "login");
+        return "login"
+    }
 }
