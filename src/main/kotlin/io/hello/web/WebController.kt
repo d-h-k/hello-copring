@@ -9,12 +9,14 @@ class WebController {
 
     @GetMapping
     fun index(model: Model):String {
+        model.addAttribute("title", "sign in");
         return "index"
     }
 
 
     @GetMapping("/sign")
     fun sign(model: Model) : String {
+        model.addAttribute("title", "sign in");
         return "sign"
     }
 
