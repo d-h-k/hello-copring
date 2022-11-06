@@ -1,4 +1,6 @@
 package io.hello.web.user
 
-interface UserReposietory {
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface UserRepository:JpaRepository<UserInformation,Long> {
 }
