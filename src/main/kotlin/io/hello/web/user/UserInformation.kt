@@ -24,12 +24,15 @@ class UserInformation {
     var password: String? = null
 
     //@Column(name = "dg")
-    @OneToOne()
-    var account: AccountDomain? = null;
+    //@OneToOne()
+    //var account: AccountDomain? = null;
+
 
 
     constructor(accoutId: String?, password: String?) {
         this.accoutId = accoutId
         this.password = password
     }
+
+    constructor()
 }
