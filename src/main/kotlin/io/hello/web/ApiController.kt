@@ -2,6 +2,7 @@ package io.hello.web
 
 import io.hello.web.user.UserInformation
 import io.hello.web.user.UserRepository
+import lombok.extern.slf4j.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
@@ -19,12 +20,4 @@ class ApiController {
         return "hell";
     }
 
-    @PostMapping("/sign")
-    fun signInRequest(
-        module: Module,
-        @RequestParam("email") email: String,
-        @RequestParam("password") password: String
-    ) {
-        val savedUser = userRepository.save(UserInformation(email,password))
-    }
 }

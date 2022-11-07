@@ -2,6 +2,7 @@ package io.hello.web.user
 
 import io.hello.web.account.AccountDomain
 import lombok.AccessLevel
+import lombok.AllArgsConstructor
 import lombok.Getter
 import lombok.NoArgsConstructor
 import lombok.Setter
@@ -17,7 +18,9 @@ class UserInformation {
     @GeneratedValue
     var id: Long? = null
 
+    @Column(name = "account_id")
     var accoutId: String? = null
+
     var password: String? = null
 
     //@Column(name = "dg")
